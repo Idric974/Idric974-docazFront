@@ -1,0 +1,119 @@
+.box,
+.usersName,
+.usersInfo,
+.titleBox,
+.title,
+.inconeBox,
+.iconeText,
+.usersInfosBox,
+.formBox,
+.postButton,
+.inputInstruction,
+.inputImage,
+.userImage {
+  /* border: solid green 3px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/** Titre de la page **/
+
+.titleBox {
+  /* border: solid red 1px; */
+  width: 100%;
+  flex-direction: row;
+  padding: 10px 0px 10px 0px;
+  border-bottom: solid 1px black;
+}
+
+.title {
+  /* border: solid green 1px; */
+  width: 80%;
+  flex-direction: row;
+  font-family: var(--fonte);
+  font-size: 2rem;
+  color: var(--Primary);
+}
+
+.inconeBox {
+  /* border: solid green 1px; */
+  width: 20%;
+}
+
+.incone {
+  /* border: solid green 1px; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconeText {
+  width: 100%;
+  flex-direction: row;
+  font-size: 0.5rem;
+}
+
+/** Information sur le l'utilisateur **/
+
+.usersInfosBox {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.usersInfo {
+  /* border: solid green 1px; */
+  width: 100%;
+  flex-direction: row;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.info1 {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.usersInfoImage {
+  width: 100%;
+  border-radius: 50%;
+  margin: 10px 0px 10px 0px;
+}
+
+/** Formulaire de modification **/
+
+.formBox {
+  /* border: solid green 1px; */
+  width: 98%;
+  margin: 10px 0px 10px 0px;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+
+.inputInstruction {
+  font-size: 1.5rem;
+  padding: 10px 5px 10px 5px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.userImage {
+  width: 100%;
+  border-radius: 50%;
+  margin: 15px 0px 10px 0px;
+}
+.postButton {
+  padding: 10px;
+}
+
+.prewieuImageBox {
+  width: 100%;
+}
+
+.prewieuImage {
+  width: 100%;
+}

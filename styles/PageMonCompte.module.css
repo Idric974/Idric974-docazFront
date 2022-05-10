@@ -1,0 +1,84 @@
+.box {
+  /* border: solid blue 1px; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/** Informations de votre compte utilisateur **/
+
+.monCompteBox {
+  /* border: solid green 1px; */
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.monCompteTitle {
+  /* border: solid green 1px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.monCompteInfos {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid black 1px;
+}
+
+.monCompteItems {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 5px;
+}
+
+/** Modification des informations de votre compte utilisateur **/
+
+.modifierMonCompteBox {
+  /* border: solid green 1px; */
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.boxForm {
+  /* border: solid red 1px; */
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageUtilisateur {
+  color: transparent;
+  font-size: 1.5rem;
+}
+
+.imageUtilisateur > p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}

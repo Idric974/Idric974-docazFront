@@ -1,0 +1,156 @@
+.box {
+  /* border: solid green 1px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.postBoxDiv {
+  /* border: solid red 1px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.postCart {
+  /* border: solid green 1px; */
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 10px 10px 10px;
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+}
+
+.idDuPost {
+  font-size: 2.5rem;
+  color: red;
+}
+
+/** Identification de l’auteur du post **/
+
+.postCartAuteur {
+  /* border: solid green 1px; */
+  /* height: 50px; */
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.postCartAuteurImageBox {
+  width: 20%;
+  /* border: solid green 1px; */
+}
+
+.postCartAuteurImage {
+  border: solid black 1px;
+  border-radius: 50%;
+  border: solid black 1px;
+  background-image: url(../../src/images/Jerome_Henry.png);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.prenomNomBox {
+  /* border: solid green 1px; */
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prenomNom {
+  /* border: solid red 1px; */
+  justify-content: left;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.datePost {
+  /* border: solid red 1px; */
+  justify-content: left;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.postCartAuteurContact {
+  /* border: solid green 1px; */
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--Primary);
+  margin-top: -10px;
+}
+
+/** Titre du post **/
+
+.titreDuPost {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin: 20px 0px 10px 0px;
+  border-bottom: solid black 1px;
+}
+
+/** Texte du post **/
+
+.texteDuPost {
+  font-size: 1.2rem;
+  margin: 10px 0px 10px 0px;
+  padding: 0px 0px 0px 3px;
+}
+
+/** Image du post **/
+
+.imagesDuPost {
+  border: solid red 1px;
+  width: 100%;
+  height: 300px;
+  /* background-image: url(../src/images/306-maxi.jpg);
+  background-size: cover; */
+  border-radius: 6px;
+}
+
+/** Like du post **/
+
+/* Like barre */
+.likeBarBox {
+  /* border: solid red 1px; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nbLikeBox,
+.like,
+.disLike {
+  /* border: solid green 1px; */
+  width: 33%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.likeIcone {
+  color: blue;
+}

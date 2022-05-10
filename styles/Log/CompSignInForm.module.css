@@ -1,0 +1,13 @@
+.box,
+.usersInfoLabel {
+  /* border: solid green 1px; */
+  /* height: 50px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  margin: 10px 0px 10px 0px;
+}

@@ -1,0 +1,92 @@
+.box {
+  /* border: solid green 5px; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.boxTitle {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 35px;
+  padding: 10px 0px 10px 0px;
+  /* border-bottom: solid var(--Primary) 1px; */
+}
+
+.boxLogin {
+  /* border: solid red 1px; */
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px black;
+  padding: 15px 0px 15px 0px;
+}
+
+.boxForm {
+  /* border: solid red 1px; */
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.imageUtilisateur {
+  color: transparent;
+  font-size: 1.5rem;
+}
+
+.imageUtilisateurTexte {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+.imageUtilisateurButton {
+  /* border: solid red 1px; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallFormat {
+  /* border: solid red 1px; */
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.labelFormat {
+  /* border: solid red 1px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hrFormat {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px 20px 0px;
+  background-color: black;
+}
