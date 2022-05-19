@@ -5,11 +5,11 @@ export const DELETE_USERS = 'DELETE_USERS';
 
 //! Logique pour la création d'un nouvel utilisateur.
 
-export const addUsers = (data) => {
+export const addUser = (data) => {
   return async (dispatch) => {
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/user`,
+        `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/user/`,
         data
       );
 
@@ -29,6 +29,35 @@ export const addUsers = (data) => {
     }
   };
 };
+
+//! -------------------------------------------------
+
+//! Logique pour la création d'un nouvel utilisateur.
+
+// export const addUsers = (data) => {
+//   return async (dispatch) => {
+//     try {
+//       const res = await axios.post(
+//         `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/user`,
+//         data
+//       );
+
+//       console.log(
+//         "👍 Users.actions ==> ADD_USERS ==> infos sur l'auteur du post :",
+//         res.data
+//       );
+
+//       dispatch({ type: ADD_USERS, payload: res.data });
+
+//       window.location = '/';
+//     } catch (err) {
+//       return console.log(
+//         '❌ Users.actions ==> ADD_USERS ==> Créer un utilisateur :',
+//         err
+//       );
+//     }
+//   };
+// };
 
 //! -------------------------------------------------
 

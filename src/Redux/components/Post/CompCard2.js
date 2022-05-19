@@ -36,22 +36,12 @@ library.add(
 const Card = ({ post }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log('==============> ', post);
+  console.log('post ==============> ', post);
 
   //! Le profil de l'auteur du post.
 
   const usersData = useSelector((state) => state.usersReducer);
   // console.log("⭐ CompCard ===>  Le profil de l'auteur du post :", usersData);
-
-  //! --------------------------------------------------
-
-  //! Le profile de l'utilisateur connecté.
-
-  const userData = useSelector((state) => state.userReducer);
-  // console.log(
-  //   "⭐ CompCard ===>  Le profile de l'utilisateur connecté  :",
-  //   userData
-  // );
 
   //! --------------------------------------------------
 
@@ -72,19 +62,10 @@ const Card = ({ post }) => {
           <>
             {/********** User image Box **********/}
             <div className={styles.userInfo}>
-              {/** User image Box **/}
               <div className={styles.userImageBox}>
                 <img
                   className={styles.userImage}
-                  src={
-                    !isEmpty(usersData[0]) &&
-                    usersData
-                      .map((user) => {
-                        if (user._id === post.posterId) return user.file;
-                        else return null;
-                      })
-                      .join('')
-                  }
+                  src={post.userImage}
                   alt={post.userPseudo}
                 />
               </div>
@@ -102,7 +83,7 @@ const Card = ({ post }) => {
 
                 {/** Date de création du post **/}
                 <div className={styles.postDate}>
-                  {dateParser(post.createdAt)}
+                  {dateParser(post.postDate)}
                 </div>
               </div>
 

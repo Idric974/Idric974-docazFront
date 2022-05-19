@@ -2,6 +2,7 @@ import styles from '../../../../styles/Log/CompIndexLog.module.css';
 import React, { useState } from 'react';
 import SignInForm from './CompSignInForm';
 import SignUpForm from './CompSignUpForm';
+import SignUpForm2 from './CompSignUpForm2';
 
 const IndexLog = (props) => {
   const [signUpModal, setSignUpModal] = useState(props.signup);
@@ -37,7 +38,7 @@ const IndexLog = (props) => {
         </div>
       </div>
 
-      {signUpModal && <SignUpForm />}
+      {signUpModal && <SignUpForm2 />}
       {signInModal && <SignInForm />}
     </div>
   );

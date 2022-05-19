@@ -4,24 +4,37 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { timestampParser } from '../Utils';
 import { addPost } from '../../actions/posts.action';
-import { getUser } from '../../actions/user.actions';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../../../src/Firebase/firebase';
+import { auth } from '../../../../src/utils/firebase.config';
+import 'firebase/auth';
+
+console.log('auth : ', auth._delegate.currentUser);
 
 const CompPosterAnnonce2 = () => {
   //
-  //! Récupération des informations user.
+  //! Les constantes.
 
-  const userData = useSelector((state) => state.userReducer);
+  const [displayName, setDisplayName] = useState('');
   const [userPseudo, setUserPseudo] = useState('');
   const [userImage, setUserImage] = useState('');
   const [posterId, setPosterId] = useState('');
 
-  // useEffect(() => {
-  //   setUserPseudo(userData.pseudo);
-  //   setUserImage(userData.file);
-  //   setPosterId(userData._id);
-  // }, [userData.pseudo, userData.file, userData._id]);
+  useEffect(() => {
+    setDisplayName(auth._delegate.currentUser.displayName);
+    setUserPseudo(auth._delegate.currentUser.email);
+    setUserImage(auth._delegate.currentUser.photoURL);
+    setPosterId(auth._delegate.currentUser.uid);
+  }, []);
+
+  console.log('Téléphone : ', displayName);
+  console.log('email : ', userPseudo);
+  console.log('userImage : ', userImage);
+  console.log('posterId : ', posterId);
+
+  //! -------------------------------------------------
+
+  //! Récupération des informations user.
 
   //! -------------------------------------------------
 
@@ -58,6 +71,7 @@ const CompPosterAnnonce2 = () => {
   let date = new Date().getTime();
   let imageUrl;
   let data;
+  let postDate = new Date();
 
   const handlePost = async (e) => {
     e.preventDefault();
@@ -80,6 +94,8 @@ const CompPosterAnnonce2 = () => {
             posterId,
             userPseudo,
             userImage,
+            displayName,
+            postDate,
             name,
             brand,
             model,
@@ -116,6 +132,7 @@ const CompPosterAnnonce2 = () => {
   return (
     <div className={styles.box}>
       <h1>CompPosterAnnonce2</h1>
+
       <div className={styles.PostForm}>
         <input
           className={styles.inputTitle}
@@ -195,7 +212,7 @@ const CompPosterAnnonce2 = () => {
         {name || brand || model || town || description ? (
           <li className="card-container">
             {/** Image de l'article **/}
-            <div>{userData.pseudo}</div>
+            <div>{userPseudo}</div>
 
             {/** Nom de l'article **/}
             <div>{name}</div>
