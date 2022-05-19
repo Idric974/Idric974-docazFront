@@ -6,13 +6,32 @@ export const GET_ONLY_POSTS_USER = 'GET_ONLY_POSTS_USER';
 export const UPDATE_POSTS = 'UPDATE_POSTS';
 export const DELETE_POST = 'DELETE_POST';
 
+//! Logique de gestion de nouveaux posts.
+
+export const addPost = (data) => {
+  return async (dispatch) => {
+    const res = await axios.post(
+      `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/post/`,
+      data
+    );
+
+    console.log(
+      '👍 Posts.actions ==> ADD_POST ==> Ajouter un post :',
+      res.data
+    );
+
+    // window.location = '/';
+  };
+};
+
+//! -------------------------------------------------
 //! Logique pour la récupération des posts.
 
 export const getPosts = () => {
   return async (dispatch) => {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/post/`
+        `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/post/readAllPosts`
       );
 
       // console.log(
@@ -61,21 +80,21 @@ export const getOnlyUserPosts = (uid) => {
 
 //! Logique de gestion de nouveaux posts.
 
-export const addPost = (data) => {
-  return async (dispatch) => {
-    const res = await axios.post(
-      `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/post/`,
-      data
-    );
+// export const addPost = (data) => {
+//   return async (dispatch) => {
+//     const res = await axios.post(
+//       `${process.env.NEXT_PUBLIC_ANALYTICS_URL}api/post/`,
+//       data
+//     );
 
-    console.log(
-      '👍 Posts.actions ==> ADD_POST ==> Ajouter un post :',
-      res.data
-    );
+//     console.log(
+//       '👍 Posts.actions ==> ADD_POST ==> Ajouter un post :',
+//       res.data
+//     );
 
-    window.location = '/';
-  };
-};
+//     window.location = '/';
+//   };
+// };
 
 //! -------------------------------------------------
 

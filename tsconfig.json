@@ -26,7 +26,8 @@
     "pages/PosterArticle.js",
     "src/components/PosterArticle.js",
     "pages/index.js",
-    "pages/_app.js"
+    "pages/_app.js",
+    "src/utils/.js"
   ],
   "exclude": ["node_modules"]
 }

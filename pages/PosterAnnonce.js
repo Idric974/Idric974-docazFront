@@ -1,6 +1,7 @@
 import styles from '../styles/Post/CompoPosterAnnonce.module.css';
 import CompNavigationBar from '../src/Redux/components/Navigation/CompNavigationBar';
-import CompPosterAnnonce from '../src/Redux/components/Post/CompPosterAnnonce';
+//import CompPosterAnnonce from '../src/Redux/components/Post/CompPosterAnnonce';
+import CompPosterAnnonce2 from '../src/Redux/components/Post/CompPosterAnnonce2';
 import { useSelector } from 'react-redux';
 
 const PosterAnnonce = () => {
@@ -10,7 +11,8 @@ const PosterAnnonce = () => {
   return (
     <div className={styles.box}>
       <CompNavigationBar></CompNavigationBar>
-      <CompPosterAnnonce></CompPosterAnnonce>
+      {/* <CompPosterAnnonce></CompPosterAnnonce> */}
+      <CompPosterAnnonce2></CompPosterAnnonce2>
     </div>
   );
 };

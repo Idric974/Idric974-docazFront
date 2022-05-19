@@ -64,20 +64,19 @@ function MyApp({ Component, pageProps }) {
   //! --------------------------------------------------
 
   useEffect(() => {
-    store.dispatch(getUser(uid));
-    store.dispatch(getUsers());
-
-    store.dispatch(getPosts());
-    store.dispatch(getOnlyUserPosts(uid));
+    // store.dispatch(getUser(uid));
+    // store.dispatch(getUsers());
+    // store.dispatch(getPosts());
+    // store.dispatch(getOnlyUserPosts(uid));
   }, [store, uid]);
 
   return (
     <>
       <Provider store={store}>
         <Head>
-          <title>docaz.re</title>
+          <title>Docaz.re</title>
           <meta name="description" content="Trouvez vos pièces détachées" />
-          <link rel="icon" href="/public/favicon/favicon.ico" />
+          <link rel="icon" href="/Icone_docaz.re_256x256_fond_tsp.ico" />
         </Head>
         <Component {...pageProps} />
       </Provider>
